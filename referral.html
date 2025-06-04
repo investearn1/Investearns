@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Referral - InvestEarn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>🔗 Your Referral Link</h2>
+    <p>Copy and share your referral link below:</p>
+    <input type="text" id="refLink" value="https://investeearn1.github.io/index.html?ref=YOURMOBILE" readonly>
+    <button onclick="copyReferral()">Copy Link</button>
+</div>
+<script>
+function copyReferral() {
+    var copyText = document.getElementById("refLink");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Referral link copied: " + copyText.value);
+}
+</script>
+</body>
+</html>
